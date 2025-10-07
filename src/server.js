@@ -11,7 +11,15 @@ dotenv.config();
 const app = express();
 
 // Middleware
-app.use(cors());
+
+const allowedOrigin = "https://talrn-internship-soham.onrender.com";
+app.use(
+  cors({
+    origin: allowedOrigin,
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true, // if you're using cookies or auth headers
+  })
+);
 app.use(express.json());
 
 // ----- Temporary in-memory storage for OTPs -----
