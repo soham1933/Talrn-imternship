@@ -1,0 +1,155 @@
+.talrn-network-section {
+  background: url('https://api.builder.io/api/v1/image/assets/TEMP/cf29848d8152a53238f52ab747761ae000e7ca38?width=2580') lightgray 0% 0% / 100px 100px repeat;
+  border-radius: 16px;
+  margin: 40px auto;
+  max-width: 1290px;
+  padding: 64px 60px;
+  color: #fff;
+}
+
+.network-container {
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+.network-content {
+  margin-bottom: 60px;
+}
+
+.network-title {
+  font-family: 'Poppins', -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 51px;
+  color: #FEFEFE;
+  margin-bottom: 20px;
+  max-width: 558px;
+}
+
+.network-subtitle {
+  font-family: 'Manrope', -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 27.2px;
+  color: #FFF;
+  margin-bottom: 60px;
+  max-width: 563px;
+}
+
+.network-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.network-card {
+  background: #5271FF;
+  border-radius: 8px;
+  padding: 17px 15px;
+  cursor: pointer;
+  transition: all 0.3s;
+  position: relative;
+  height: 135px;
+}
+
+.network-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.card-content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-title {
+  font-family: 'Poppins', -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 27.2px;
+  color: #FFF;
+  margin-bottom: 10px;
+}
+
+.card-description {
+  font-family: 'Manrope', -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 23.8px;
+  color: #FFF;
+  margin-bottom: 15px;
+  flex-grow: 1;
+}
+
+.card-icon {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  width: 14px;
+  height: 14px;
+  color: #FFF;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .talrn-network-section {
+    margin: 40px 20px;
+    padding: 50px 40px;
+  }
+  
+  .network-cards {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .talrn-network-section {
+    margin: 30px 15px;
+    padding: 40px 30px;
+  }
+  
+  .network-title {
+    font-size: 24px;
+    line-height: 36px;
+  }
+  
+  .network-subtitle {
+    font-size: 14px;
+    line-height: 24px;
+  }
+  
+  .network-card {
+    height: auto;
+    min-height: 120px;
+  }
+}
+
+@media (max-width: 480px) {
+  .talrn-network-section {
+    margin: 20px 10px;
+    padding: 30px 20px;
+  }
+  
+  .network-title {
+    font-size: 20px;
+    line-height: 30px;
+  }
+  
+  .network-subtitle {
+    font-size: 13px;
+    line-height: 22px;
+  }
+  
+  .card-title {
+    font-size: 14px;
+  }
+  
+  .card-description {
+    font-size: 12px;
+  }
+}

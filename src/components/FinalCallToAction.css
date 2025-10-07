@@ -1,0 +1,154 @@
+.final-cta-section {
+  background: #5271FF;
+  border-radius: 8px;
+  margin: 40px auto;
+  max-width: 1290px;
+  padding: 48px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.final-cta-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1230px;
+  margin: 0 auto;
+}
+
+.cta-content {
+  max-width: 625px;
+}
+
+.cta-title {
+  font-family: 'Manrope', -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 40.8px;
+  color: #FEFEFE;
+  margin-bottom: 30px;
+  max-width: 267px;
+}
+
+.features-list {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.check-icon {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+.feature-text {
+  font-family: 'Manrope', -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 27.2px;
+  color: #FEFEFE;
+}
+
+.final-cta-button {
+  padding: 14px 150px 15.19px;
+  background: #FEFEFE;
+  border: 2px solid #FEFEFE;
+  border-radius: 8px;
+  color: #343F52;
+  font-family: 'Manrope', -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 27.2px;
+  letter-spacing: -0.2px;
+  cursor: pointer;
+  transition: all 0.3s;
+  min-width: 397px;
+}
+
+.final-cta-button:hover {
+  background: #f0f0f0;
+  transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .final-cta-section {
+    margin: 40px 20px;
+  }
+  
+  .final-cta-container {
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+  }
+  
+  .features-list {
+    justify-content: center;
+  }
+  
+  .final-cta-button {
+    min-width: auto;
+    padding: 14px 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  .final-cta-section {
+    padding: 30px 20px;
+    margin: 30px 15px;
+  }
+  
+  .cta-title {
+    font-size: 20px;
+    line-height: 32px;
+    max-width: none;
+  }
+  
+  .features-list {
+    gap: 20px;
+  }
+  
+  .feature-text {
+    font-size: 14px;
+  }
+  
+  .final-cta-button {
+    padding: 12px 40px;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .final-cta-section {
+    padding: 25px 15px;
+    margin: 20px 10px;
+  }
+  
+  .cta-title {
+    font-size: 18px;
+    line-height: 28px;
+  }
+  
+  .features-list {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .feature-text {
+    font-size: 13px;
+  }
+  
+  .final-cta-button {
+    padding: 12px 30px;
+    font-size: 14px;
+  }
+}

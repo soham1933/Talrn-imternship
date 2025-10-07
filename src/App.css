@@ -1,0 +1,114 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.6;
+  color: #333;
+}
+
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-weight: 700;
+  color: #333;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+/* Container utilities */
+.container {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Section spacing */
+section {
+  position: relative;
+}
+
+/* Responsive utilities */
+@media (max-width: 1200px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (max-width: 992px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 540px;
+    padding: 0 15px;
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    padding: 0 10px;
+  }
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Focus styles for accessibility */
+button:focus,
+a:focus,
+input:focus {
+  outline: 2px solid #5271FF;
+  outline-offset: 2px;
+}
+
+/* Loading and transition states */
+* {
+  transition: color 0.3s, background-color 0.3s, border-color 0.3s, transform 0.3s;
+}
+
+/* Hide scrollbar for scrollable containers while maintaining functionality */
+.scrollable::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollable {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

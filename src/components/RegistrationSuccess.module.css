@@ -1,0 +1,50 @@
+.container {
+  max-width: 400px;
+  margin: 150px auto;
+  padding: 40px 30px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-family: "DM Serif Display";
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+h2 {
+  font-size: 28px;
+  color: #0d0e0d; /* green success color */
+  margin-bottom: 15px;
+  font-family: "DM Serif Display";
+}
+
+p {
+  font-size: 16px;
+  color: #374151; /* dark gray */
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+    margin: 100px 15px;
+    padding: 30px 20px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+}
+

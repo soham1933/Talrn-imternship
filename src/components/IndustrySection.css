@@ -1,0 +1,157 @@
+.industry-section {
+  padding: 70px 0;
+  background: #fff;
+}
+
+.industry-container {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 78.5px;
+  align-items: center;
+}
+
+.industry-content {
+  padding: 28px;
+}
+
+.industry-title {
+  font-family: 'Poppins', -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 51px;
+  color: #343F52;
+  margin-bottom: 25px;
+}
+
+.industry-subtitle {
+  font-family: 'Manrope', -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 30.6px;
+  color: #343F52;
+  margin-bottom: 35px;
+}
+
+.industry-question {
+  font-family: 'Manrope', -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 30.6px;
+  color: #343F52;
+  margin-bottom: 25px;
+}
+
+.industry-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.industry-tag {
+  display: inline-flex;
+  padding: 11px 17px;
+  border: 1px solid #D3D3D3;
+  border-radius: 30px;
+  background: #fff;
+  color: #5271FF;
+  font-family: 'Manrope', -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.industry-tag:hover {
+  background: #5271FF;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.industry-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.team-image {
+  width: 100%;
+  max-width: 503px;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .industry-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .industry-image {
+    order: -1;
+  }
+}
+
+@media (max-width: 768px) {
+  .industry-section {
+    padding: 50px 0;
+  }
+  
+  .industry-content {
+    padding: 20px;
+  }
+  
+  .industry-title {
+    font-size: 24px;
+    line-height: 36px;
+  }
+  
+  .industry-subtitle,
+  .industry-question {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  
+  .industry-tags {
+    gap: 10px;
+  }
+  
+  .industry-tag {
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .industry-container {
+    padding: 0 15px;
+  }
+  
+  .industry-content {
+    padding: 15px;
+  }
+  
+  .industry-title {
+    font-size: 20px;
+    line-height: 30px;
+  }
+  
+  .industry-subtitle,
+  .industry-question {
+    font-size: 14px;
+    line-height: 22px;
+  }
+  
+  .industry-tags {
+    gap: 8px;
+  }
+  
+  .industry-tag {
+    padding: 6px 10px;
+    font-size: 11px;
+  }
+}

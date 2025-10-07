@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap');
+
+/* CSS Reset and Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Figma Design System Colors */
+  --primary-blue: #5271FF;
+  --primary-blue-hover: #4060E6;
+  --text-primary: #343F52;
+  --text-secondary: #6B7280;
+  --background-light: #F3FAFE;
+  --background-white: #FFFFFF;
+  --border-color: #E5E7EB;
+  
+  /* Typography */
+  --font-family: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+  --font-size-xs: 12px;
+  --font-size-sm: 14px;
+  --font-size-base: 16px;
+  --font-size-lg: 18px;
+  --font-size-xl: 20px;
+  --font-size-2xl: 24px;
+  --font-size-3xl: 30px;
+  --font-size-4xl: 36px;
+  --font-size-5xl: 48px;
+  
+  /* Line Heights */
+  --line-height-tight: 1.25;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.7;
+  
+  /* Letter Spacing */
+  --letter-spacing-tight: -0.2px;
+  --letter-spacing-normal: 0;
+  
+  /* Spacing */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  --spacing-2xl: 48px;
+  --spacing-3xl: 64px;
+  
+  /* Border Radius */
+  --border-radius-sm: 4px;
+  --border-radius-md: 8px;
+  --border-radius-lg: 12px;
+  --border-radius-xl: 16px;
+  --border-radius-full: 1000px;
+  
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+html {
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-normal);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  color: var(--text-primary);
+  background-color: var(--background-white);
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-normal);
+  min-height: 100vh;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-family);
+  font-weight: 700;
+  line-height: var(--line-height-tight);
+  letter-spacing: var(--letter-spacing-tight);
+  
+  margin: 0;
+}
+
+h1 {
+  font-size: var(--font-size-5xl);
+}
+
+h2 {
+  font-size: var(--font-size-4xl);
+  color: #343F52;
+}
+
+h3 {
+  font-size: var(--font-size-3xl);
+}
+
+h4 {
+  font-size: var(--font-size-2xl);
+}
+
+h5 {
+  font-size: var(--font-size-xl);
+}
+
+h6 {
+  font-size: var(--font-size-lg);
+}
+
+p {
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-relaxed);
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+/* Links */
+a {
+  color: var(--primary-blue);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--primary-blue-hover);
+}
+
+
+button {
+  font-family: var(--font-family);
+  font-weight: 700;
+
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--border-radius-md);
+  letter-spacing: var(--letter-spacing-tight);
+}
+
+button:focus {
+  outline: 2px solid var(--primary-blue);
+  outline-offset: 2px;
+}
+
+/* Utility Classes */
+.container {
+  /* max-width: 1200px; */
+  margin: 0 auto;
+  padding: 0 var(--spacing-lg);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Responsive Typography */
+@media (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+  
+  h1 {
+    font-size: var(--font-size-4xl);
+  }
+  
+  h2 {
+    font-size: var(--font-size-3xl);
+    color: #343F52;
+  }
+  
+  h3 {
+    font-size: var(--font-size-2xl);
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 13px;
+  }
+  
+  h1 {
+    font-size: var(--font-size-3xl);
+  }
+  
+  h2 {
+    font-size: var(--font-size-2xl);
+  }
+  
+  h3 {
+    font-size: var(--font-size-xl);
+  }
+}

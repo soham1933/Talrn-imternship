@@ -1,0 +1,222 @@
+.footer {
+  background: #000;
+  color: #fff;
+  padding: 70px 0 0;
+}
+
+.footer-container {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-content {
+  border-bottom: 3px solid #808080;
+  padding-bottom: 38px;
+}
+
+.footer-sections {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+}
+
+.footer-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.section-title {
+  font-family: 'Manrope', -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 34px;
+  color: #FEFEFE;
+  margin-bottom: 20px;
+}
+
+.section-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.footer-link {
+  font-family: 'Manrope', -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 27.2px;
+  color: #D3D3D3;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-link:hover {
+  color: #5271FF;
+}
+
+.social-icons {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+
+.social-link {
+  display: flex;
+  width: 20px;
+  height: 20px;
+  color: #fff;
+  transition: color 0.3s;
+}
+
+.social-link:hover {
+  color: #5271FF;
+}
+
+.footer-bottom {
+  padding: 40px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Manrope', -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 27.2px;
+  color: #D3D3D3;
+}
+
+.talrn-brand {
+  font-family: 'Manrope', -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #FFF;
+}
+
+.cg-advantage {
+  color: #5271FF;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.cg-advantage:hover {
+  text-decoration: underline;
+}
+
+.footer-legal {
+  display: flex;
+  gap: 34px;
+}
+
+.legal-link {
+  font-family: 'Manrope', -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 27.2px;
+  color: #D3D3D3;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.legal-link:hover {
+  color: #5271FF;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .footer-sections {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+  
+  .footer-bottom {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+  
+  .footer-info {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 50px 0 0;
+  }
+  
+  .footer-sections {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+  
+  .section-title {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+  
+  .footer-link {
+    font-size: 14px;
+  }
+  
+  .footer-info {
+    font-size: 14px;
+  }
+  
+  .talrn-brand {
+    font-size: 18px;
+  }
+  
+  .footer-legal {
+    gap: 20px;
+  }
+  
+  .legal-link {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-container {
+    padding: 0 15px;
+  }
+  
+  .footer-content {
+    padding-bottom: 25px;
+  }
+  
+  .section-title {
+    font-size: 16px;
+  }
+  
+  .footer-link {
+    font-size: 13px;
+  }
+  
+  .footer-info {
+    font-size: 12px;
+    gap: 5px;
+  }
+  
+  .talrn-brand {
+    font-size: 16px;
+  }
+  
+  .footer-legal {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .legal-link {
+    font-size: 13px;
+  }
+}

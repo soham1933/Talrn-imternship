@@ -1,0 +1,184 @@
+.managed-services-section {
+  background: url('https://api.builder.io/api/v1/image/assets/TEMP/0a2a477b22cec279d01009ab2079da98945f2520?width=2580') lightgray 0% 0% / 100px 100px repeat;
+  border-radius: 16px;
+  margin: 40px auto;
+  max-width: 1290px;
+  padding: 64px 60px;
+  color: #fff;
+}
+
+.services-container {
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+.services-content {
+  margin-bottom: 60px;
+}
+
+.services-title {
+  font-family: 'Poppins', -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 51px;
+  color: #FEFEFE;
+  margin-bottom: 20px;
+  max-width: 425px;
+}
+
+.services-description {
+  font-family: 'Manrope', -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 27.2px;
+  color: #FFF;
+  max-width: 951px;
+}
+
+.plans-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.plan-card {
+  background: #5271FF;
+  border-radius: 8px;
+  padding: 17px 15px;
+  height: 158px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.plan-header {
+  flex-grow: 1;
+}
+
+.plan-title {
+  font-family: 'Poppins', -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 27.2px;
+  color: #FEFEFE;
+  margin-bottom: 10px;
+}
+
+.plan-pricing {
+  display: flex;
+  align-items: baseline;
+  gap: 5px;
+  margin-bottom: 15px;
+}
+
+.plan-price {
+  font-family: 'Manrope', -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 34px;
+  color: #FEFEFE;
+}
+
+.plan-period {
+  font-family: 'Manrope', -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 27.2px;
+  color: #FEFEFE;
+}
+
+.plan-description {
+  font-family: 'Manrope', -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 34px;
+  color: #FEFEFE;
+  margin-bottom: 15px;
+}
+
+.plan-button {
+  background: #FFF;
+  border: none;
+  border-radius: 24px;
+  padding: 9px 32px;
+  color: #000;
+  font-family: 'Manrope', -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s;
+  align-self: flex-start;
+}
+
+.plan-button:hover {
+  background: #f0f0f0;
+  transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .managed-services-section {
+    margin: 40px 20px;
+    padding: 50px 40px;
+  }
+  
+  .plans-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .managed-services-section {
+    margin: 30px 15px;
+    padding: 40px 30px;
+  }
+  
+  .services-title {
+    font-size: 24px;
+    line-height: 36px;
+  }
+  
+  .services-description {
+    font-size: 14px;
+    line-height: 24px;
+  }
+  
+  .plan-card {
+    height: auto;
+    min-height: 140px;
+  }
+}
+
+@media (max-width: 480px) {
+  .managed-services-section {
+    margin: 20px 10px;
+    padding: 30px 20px;
+  }
+  
+  .services-title {
+    font-size: 20px;
+    line-height: 30px;
+  }
+  
+  .services-description {
+    font-size: 13px;
+    line-height: 22px;
+  }
+  
+  .plan-title {
+    font-size: 14px;
+  }
+  
+  .plan-price {
+    font-size: 18px;
+  }
+  
+  .plan-period {
+    font-size: 14px;
+  }
+  
+  .plan-description {
+    font-size: 16px;
+  }
+}
