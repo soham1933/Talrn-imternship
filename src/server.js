@@ -26,16 +26,17 @@ app.use(express.json());
 app.use((req, res, next) => {
   res.setHeader(
     "Content-Security-Policy",
-    "default-src 'self'; " +
-    "script-src 'self' 'unsafe-inline' blob:; " +
-    "style-src 'self' 'unsafe-inline'; " +
-    "img-src 'self' data:; " +
-    "connect-src 'self' https://talrn-internship-soham.onrender.com; " +
-    "font-src 'self';"
+    `
+    default-src 'self';
+    script-src 'self' 'unsafe-inline' blob: https://www.googletagmanager.com https://www.google-analytics.com;
+    style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+    font-src 'self' https://fonts.gstatic.com;
+    img-src 'self' data: https://www.google-analytics.com;
+    connect-src 'self' https://talrn-internship-soham.onrender.com https://www.google-analytics.com;
+    `
   );
   next();
 });
-
 // ----- Temporary in-memory storage for OTPs -----
 let tempUsers = {};
 
