@@ -26,16 +26,14 @@ export default function CreateAccount({ onNext }) {
     e.preventDefault();
     setLoading(true);
 
-    // Determine userEmail for OTP
     const userEmail = accountType === "organization" ? formData.workEmail : formData.email;
 
     try {
-      const res = await fetch("https://talrn-internship-soham.onrender.com/api/register", {
+      const res = await fetch("http://localhost:1234/api/register", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ ...formData, accountType, userEmail }),
+        body: JSON.stringify({ ...formData, accountType }),
       });
-
       const data = await res.json();
       if (data.success) {
         onNext(userEmail); // move to OTP verification
@@ -46,7 +44,6 @@ export default function CreateAccount({ onNext }) {
       console.error(err);
       alert("Server error, try again later.");
     }
-
     setLoading(false);
   };
 
@@ -55,7 +52,7 @@ export default function CreateAccount({ onNext }) {
       <h2>Create your Talrn Account</h2>
       <p className={styles.subtitle}>
         Talrn is an exclusive network of the world’s top talent.
-        <br />
+        <br></br>
         We provide access to top companies and resources that can help accelerate your growth.
       </p>
 
@@ -69,6 +66,7 @@ export default function CreateAccount({ onNext }) {
             onChange={(e) => setAccountType(e.target.value)}
           />
           Organization
+          
         </label>
         <label>
           <input
@@ -83,7 +81,6 @@ export default function CreateAccount({ onNext }) {
       </div>
 
       <form className={styles.form} onSubmit={handleSubmit}>
-        {/* Name fields */}
         <div className={styles.inputGroup}>
           <input
             name="firstName"
@@ -99,7 +96,6 @@ export default function CreateAccount({ onNext }) {
           />
         </div>
 
-        {/* Organization Fields */}
         {accountType === "organization" && (
           <>
             <div className={styles.inputGroup}>
@@ -164,7 +160,6 @@ export default function CreateAccount({ onNext }) {
           </>
         )}
 
-        {/* Individual Fields */}
         {accountType === "individual" && (
           <>
             <div className={styles.inputGroup}>

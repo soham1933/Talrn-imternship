@@ -10,7 +10,7 @@ export default function OtpVerification({ email, onSuccess }) {
     setLoading(true);
 
     try {
-      const res = await fetch("https://talrn-internship-soham.onrender.com/api/verify-otp", {
+      const res = await fetch("http://localhost:1234/api/verify-otp", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, otp }),
