@@ -41,7 +41,7 @@ app.post("/api/register", async (req, res) => {
   try {
     await resend.emails.send({
       from: process.env.SENDER_EMAIL,
-      to: userEmail,
+      to: 'sohambandbe1832@gmail.com',
       subject: "Your Talrn OTP",
       html: `
         <div style="font-family:Arial, sans-serif;padding:20px;">
