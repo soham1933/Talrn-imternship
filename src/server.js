@@ -25,7 +25,7 @@ app.use(express.json());
 let tempUsers = {};
 
 // ----- Configure Resend -----
-const resend = new Resend(process.env.RESEND_API_KEY);
+const resend = new Resend('re_Jj5hFN2V_7Zt4wWRntQeoiTTxq3Tn62mM');
 
 // ----- API Routes -----
 
