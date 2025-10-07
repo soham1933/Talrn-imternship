@@ -6,7 +6,7 @@
   align-items: center;
   background: #d8e2e7;
   position: relative;
-  height: auto;
+  height: fit-content;
   box-sizing: border-box;
 }
 
