@@ -66,7 +66,7 @@ app.post("/api/verify-otp", (req, res) => {
 // ----- Serve React Frontend -----
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-const buildPath = path.join(__dirname, "dist"); // change to "build" if using CRA
+const buildPath = path.join(__dirname, "../dist"); // change to "build" if using CRA
 app.use(express.static(buildPath));
 
 // All other routes serve index.html
