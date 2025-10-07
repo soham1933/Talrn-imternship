@@ -29,7 +29,7 @@ export default function CreateAccount({ onNext }) {
     const userEmail = accountType === "organization" ? formData.workEmail : formData.email;
 
     try {
-      const res = await fetch("http://localhost:1234/api/register", {
+      const res = await fetch("https://talrn-internship-soham.onrender.com/api/register", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ ...formData, accountType }),
