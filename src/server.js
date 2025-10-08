@@ -10,8 +10,25 @@ dotenv.config();
 
 const app = express();
 
-// Middleware
-app.use(cors());
+// ✅ Configure CORS properly
+const allowedOrigins = [
+  "https://talrn-internship-soham.onrender.com", // your deployed frontend
+   // (optional) for local dev
+];
+
+app.use(
+  cors({
+    origin: function (origin, callback) {
+      if (!origin || allowedOrigins.includes(origin)) {
+        callback(null, true);
+      } else {
+        callback(new Error("Not allowed by CORS"));
+      }
+    },
+    credentials: true,
+  })
+);
+
 app.use(express.json());
 
 // ----- Temporary in-memory storage for OTPs -----
@@ -37,19 +54,22 @@ app.post("/api/register", (req, res) => {
   tempUsers[userEmail] = { ...req.body, otp };
 
   // Send OTP via email
-  transporter.sendMail({
-    from: process.env.VITE_EMAIL_USER,
-    to: userEmail,
-    subject: "Your Talrn OTP",
-    text: `Your OTP is ${otp}`,
-  }, (err, info) => {
-    if (err) {
-      console.error(err);
-      return res.json({ success: false, message: "Failed to send OTP" });
+  transporter.sendMail(
+    {
+      from: process.env.VITE_EMAIL_USER,
+      to: userEmail,
+      subject: "Your Talrn OTP",
+      text: `Your OTP is ${otp}`,
+    },
+    (err, info) => {
+      if (err) {
+        console.error(err);
+        return res.json({ success: false, message: "Failed to send OTP" });
+      }
+      console.log(`OTP sent to ${userEmail}: ${otp}`);
+      res.json({ success: true });
     }
-    console.log(`OTP sent to ${userEmail}: ${otp}`);
-    res.json({ success: true });
-  });
+  );
 });
 
 // 2️⃣ Verify OTP
@@ -76,4 +96,4 @@ app.get(/.*/, (req, res) => {
 
 // ----- Start Server -----
 const PORT = process.env.PORT || 8000;
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+app.listen(PORT, () => console.log(`✅ Server running on port ${PORT}`));
