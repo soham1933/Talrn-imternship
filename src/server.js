@@ -45,7 +45,7 @@ const transporter = nodemailer.createTransport({
 
 // ----- API Routes -----
 // 1️⃣ Register user and send OTP
-app.post("/api/register", (req, res) => {
+app.post("join/api/register", (req, res) => {
   const { workEmail, email } = req.body;
   const userEmail = workEmail || email;
 
@@ -73,7 +73,7 @@ app.post("/api/register", (req, res) => {
 });
 
 // 2️⃣ Verify OTP
-app.post("/api/verify-otp", (req, res) => {
+app.post("join/api/verify-otp", (req, res) => {
   const { email, otp } = req.body;
   if (tempUsers[email] && tempUsers[email].otp == otp) {
     // TODO: Save user permanently to DB here if needed
