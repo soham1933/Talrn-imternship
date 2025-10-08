@@ -12,7 +12,8 @@ const app = express();
 
 // ✅ Configure CORS properly
 const allowedOrigins = [
-  "https://talrn-internship-soham.onrender.com", // your deployed frontend
+  "https://talrn-internship-soham.onrender.com",
+  "http://localhost:1234", // your deployed frontend
    // (optional) for local dev
 ];
 
